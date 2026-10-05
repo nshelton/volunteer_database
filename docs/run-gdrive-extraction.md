@@ -16,7 +16,7 @@ are supported, selected by the `LLM_BACKEND` env var:
 ## 1. Get the code + data
 
 ```bash
-git clone https://github.com/nshelton/siggraph-vdc.git   # or: git pull
+git clone https://github.com/nshelton/volunteer_database.git   # or: git pull
 cd siggraph-vdc
 git checkout feature/gdrive-summaries
 ```
