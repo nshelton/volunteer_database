@@ -1,0 +1,5 @@
+# Only ship the app + the web/ payload. Never the venv, raw resumes, or the
+# LinkedIn session cookies.
+.git/
+__pycache__/
+*.pyc

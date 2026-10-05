@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIGGRAPH Volunteer Skills</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CLZB6SWJX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8CLZB6SWJX');
+  </script>
+  <script>
+    // Stamp the theme before first paint so there's no flash of the wrong one.
+    // Saved choice wins; otherwise follow the OS.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      document.documentElement.dataset.theme = saved
+        || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://accounts.google.com/gsi/client" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+</head>
+<body>
+  <!-- Sign-in gate: Google account, then read access to the volunteer sheet -->
+  <div id="login-gate" class="login-gate">
+    <div class="login-card">
+      <h1>SIGGRAPH Volunteer Skills</h1>
+      <p>Sign in with an authorized Google account to continue.</p>
+      <div id="gbtn"></div>
+      <button id="sheet-btn" class="nv-toggle hidden">Open the volunteer sheet</button>
+      <p id="login-error" class="login-error hidden"></p>
+    </div>
+  </div>
+  <header class="top">
+    <div class="title-row">
+      <div class="title">
+        <h1>SIGGRAPH Volunteer Skills</h1>
+      </div>
+      <div class="head-right">
+      <div class="modes">
+        <button id="mode-browse" class="mode active">Browse</button>
+        <button id="mode-match" class="mode">Matchmake</button>
+        <button id="mode-map" class="mode">Map</button>
+        <button id="mode-skills" class="mode">Skills</button>
+        <button id="mode-table" class="mode">Table</button>
+        <button id="mode-signups" class="mode">Signups</button>
+      </div>
+        <button id="theme-btn" class="theme-btn" title="Toggle light / dark" aria-label="Toggle light / dark"></button>
+      </div>
+    </div>
+    <div class="search-row">
+      <input id="search" class="search" type="search" placeholder="Search name, skill, theme…" />
+      <button id="semantic" class="sem-toggle active" title="AI semantic search — match by meaning">semantic</button>
+    </div>
+  </header>
+
+  <section class="filters">
+    <div id="match-controls" class="match-controls hidden">
+      <div id="opp-cards" class="opp-cards"></div>
+      <textarea id="opp-text" class="opp-text" rows="3"
+        placeholder="Or describe the opportunity in your own words — who is seeking whom, and what skills they need. Volunteers are suggested by meaning, not just keywords."></textarea>
+    </div>
+    <details id="cat-section" class="cat-section">
+      <summary>Categories</summary>
+      <div id="filter-chips" class="filter-chips"></div>
+    </details>
+    <button id="nv-only" class="nv-toggle">new volunteers only</button>
+    <button id="signup-toggle" class="nv-toggle active">include signups</button>
+    <button id="clear" class="clear hidden">clear</button>
+    <div id="map-controls" class="map-controls hidden">
+      <div id="map-legend" class="map-legend"></div>
+    </div>
+    <!-- force-graph controls (Skills mode) -->
+    <div id="skills-controls" class="map-controls hidden">
+      <label class="ctl">repulsion <input id="ctl-charge" class="slider" type="range" min="0" max="4800" value="1200" /></label>
+      <label class="ctl">links <input id="ctl-link" class="slider" type="range" min="0" max="4" step="0.1" value="2" /></label>
+      <label class="ctl">min shared <input id="ctl-minlink" class="slider" type="range" min="1" max="15" value="4" /></label>
+      <button id="ctl-cluster" class="nv-toggle active">cluster by group</button>
+      <div id="skills-legend" class="map-legend"></div>
+    </div>
+  </section>
+
+  <div id="stats" class="stats"></div>
+  <main id="cards" class="cards"></main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

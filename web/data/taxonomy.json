@@ -1,0 +1,149 @@
+{
+  "categories": {
+    "rendering_graphics": {
+      "label": "Rendering & Graphics",
+      "desc": "ray tracing, shaders, real-time rendering, GPU programming, graphics APIs",
+      "group": "graphics_animation"
+    },
+    "animation": {
+      "label": "Animation & Rigging",
+      "desc": "character animation, rigging, motion, keyframe/procedural animation",
+      "group": "graphics_animation"
+    },
+    "modeling_geometry": {
+      "label": "Modeling & Geometry",
+      "desc": "3D modeling, geometry processing, meshes, CAD, sculpting",
+      "group": "graphics_animation"
+    },
+    "simulation_vfx": {
+      "label": "Simulation & VFX",
+      "desc": "physics simulation, fluids, particles, visual effects, compositing",
+      "group": "graphics_animation"
+    },
+    "machine_learning": {
+      "label": "Machine Learning & AI",
+      "desc": "deep learning, generative models, neural rendering, ML research",
+      "group": "ai_vision"
+    },
+    "computer_vision": {
+      "label": "Computer Vision",
+      "desc": "image processing, tracking, reconstruction, photogrammetry, perception",
+      "group": "ai_vision"
+    },
+    "ar_vr_xr": {
+      "label": "AR / VR / XR",
+      "desc": "augmented/virtual/mixed reality, immersive experiences, headsets",
+      "group": "engineering"
+    },
+    "game_dev": {
+      "label": "Game Development",
+      "desc": "game engines (Unity/Unreal), gameplay, interactive real-time apps",
+      "group": "engineering"
+    },
+    "web_dev": {
+      "label": "Web Development",
+      "desc": "frontend/backend web, JS frameworks, WebGL/WebGPU, full-stack",
+      "group": "engineering"
+    },
+    "software_engineering": {
+      "label": "Software Engineering",
+      "desc": "general programming, systems, infrastructure, tooling, devops",
+      "group": "engineering"
+    },
+    "design_ux": {
+      "label": "Design & UX",
+      "desc": "UX/UI design, interaction design, product design, graphic design",
+      "group": "art_design"
+    },
+    "art_illustration": {
+      "label": "Art & Illustration",
+      "desc": "concept art, illustration, traditional/digital art, art direction",
+      "group": "art_design"
+    },
+    "audio": {
+      "label": "Audio & Music",
+      "desc": "sound design, music, audio engineering, spatial audio",
+      "group": "art_design"
+    },
+    "research_academic": {
+      "label": "Research & Academia",
+      "desc": "academic research, publications, peer review, PhD-level scientific work",
+      "group": "research_academia"
+    },
+    "production_pipeline": {
+      "label": "Production & Pipeline",
+      "desc": "pipeline/technical direction, production management, studio workflows",
+      "group": "production_comms"
+    },
+    "hardware_systems": {
+      "label": "Hardware & Systems",
+      "desc": "hardware, embedded, robotics, displays, fabrication, sensors",
+      "group": "engineering"
+    },
+    "project_management": {
+      "label": "Project & Program Management",
+      "desc": "project/program management, producing, coordination, leadership",
+      "group": "production_comms"
+    },
+    "communication_outreach": {
+      "label": "Communication & Outreach",
+      "desc": "writing, marketing, social media, public relations, public speaking, media strategy",
+      "group": "production_comms"
+    },
+    "governance_leadership": {
+      "label": "Governance & Executive Leadership",
+      "desc": "board service, non-profit/institutional governance, executive leadership, organizational strategy, fiduciary & advisory oversight",
+      "group": "leadership_org"
+    },
+    "events_operations": {
+      "label": "Events & Conference Operations",
+      "desc": "large-scale event & conference operations, logistics, program/content curation, juried selection, volunteer program direction",
+      "group": "leadership_org"
+    },
+    "business_finance": {
+      "label": "Business, Finance & Strategy",
+      "desc": "financial management, budgeting, treasury/fiduciary duties, commercial & product strategy, entrepreneurship, M&A, business development",
+      "group": "leadership_org"
+    },
+    "education_teaching": {
+      "label": "Education & Teaching",
+      "desc": "teaching, curriculum design, pedagogy, technical training, student mentorship, academic program development",
+      "group": "research_academia"
+    },
+    "mentorship_community": {
+      "label": "Mentorship, Community & DEI",
+      "desc": "mentorship, community building, chapters & volunteer development, diversity/equity/inclusion advocacy, professional development",
+      "group": "leadership_org"
+    }
+  },
+  "groups": {
+    "research_academia": {
+      "label": "Research & Education",
+      "color": "#7062b3"
+    },
+    "ai_vision": {
+      "label": "AI & Vision",
+      "color": "#0c948a"
+    },
+    "graphics_animation": {
+      "label": "Graphics & Animation",
+      "color": "#d4732f"
+    },
+    "engineering": {
+      "label": "Engineering & Software",
+      "color": "#3f6524"
+    },
+    "art_design": {
+      "label": "Art & Design",
+      "color": "#b7548a"
+    },
+    "production_comms": {
+      "label": "Production & Communications",
+      "color": "#a1801d"
+    },
+    "leadership_org": {
+      "label": "Leadership & Operations",
+      "color": "#3d6ea8"
+    }
+  }
+}

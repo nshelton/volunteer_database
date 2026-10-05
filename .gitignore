@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+data/linkedin_session/
+data/skills_comparison.csv
+.env
+.DS_Store
+node_modules/
+cloudrun/web/
+data/
+volunteer_list.txt
+web/auth-config.json
