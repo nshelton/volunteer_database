@@ -148,7 +148,8 @@ Each stage is cached and idempotent. `data/volunteers.json` has one writer,
 `src/aggregate.py`, and every pipeline script re-aggregates when it finishes.
 
 **There is no script yet that writes this output into the Sheet.** The Sheet's
-current contents were imported once by hand.
+current contents were imported once by hand. `docs/sheet-sync.md` is the brief
+for building that script.
 
 Setup:
 
